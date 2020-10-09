@@ -5,11 +5,9 @@ Home: https://pypi.org/project/cfdm
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfdm-feedstock/blob/master/LICENSE.txt)
 
 Summary: A complete implementation of the CF data model
-
-
 
 Current build status
 ====================
