@@ -1,11 +1,11 @@
-About cfdm
-==========
+About cfdm-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfdm-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/cfdm
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfdm-feedstock/blob/main/LICENSE.txt)
 
 Summary: A complete implementation of the CF data model
 
