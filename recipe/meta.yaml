@@ -1,5 +1,5 @@
 {% set name = "cfdm" %}
-{% set version = "1.10.1.2" %}
+{% set version = "1.11.0.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4fef88ca2d437c93a58c9ed3e89f914f92ec35b83b0907e57b29f0eb29f50cc8
+  sha256: f303f539a2bae1cd6dfb09e054e8b0ff35edc935feaf90bb04cf276bd07f3690
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   # has scripts and cannot be noarch
   # noarch: python
@@ -22,6 +22,7 @@ requirements:
     - python
     - pip
   run:
+    - scipy >=1.10.0
     - python
     - netcdf4 >=1.5.4
     - cftime >=1.6.0
