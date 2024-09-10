@@ -11,7 +11,7 @@ source:
   sha256: 4cde7d0e10f56b62e04c8c23c130c4ce886e4cc624b2fd21c88cafbb10695b42
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   # has scripts and cannot be noarch
   # noarch: python
@@ -20,6 +20,7 @@ build:
 requirements:
   host:
     - python
+    - setuptools
     - pip
   run:
     - scipy >=1.10.0
