@@ -12,10 +12,12 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<37]
+  skip: true  # [py<38]
+  # This one is not in the metadata, but the numpy<2 restriction makes it unsolvable there.
+  skip: true  # [py>312]
   # has scripts and cannot be noarch
   # noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -23,17 +25,18 @@ requirements:
     - setuptools
     - pip
   run:
-    - dask-core >=2024.6.0,<=2024.7.1
-    - h5netcdf >=1.3.0
-    - h5py >=3.10.0
-    - s3fs >=2024.6.0
-    - scipy >=1.10.0
     - python
     - netcdf4 >=1.5.4
     - cftime >=1.6.0
     - numpy >=1.15,<2.0
-    - netcdf-flattener >=1.2.0
     - packaging >=20.0
+    - scipy >=1.10.0
+    - h5netcdf >=1.3.0
+    - h5py >=3.10.0
+    - s3fs >=2024.6.0
+    - dask-core >=2024.6.0,<=2024.7.1
+    # mandatory dependency not in the metadata
+    - cfunits
 
 test:
   imports:
@@ -45,8 +48,8 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/cfdm
-  summary: A complete implementation of the CF data model
+  home: https://ncas-cms.github.io/cfdm
+  summary: A Python reference implementation of the CF data model
   license: MIT
   license_file: LICENSE
 
