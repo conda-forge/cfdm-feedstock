@@ -1,5 +1,5 @@
 {% set name = "cfdm" %}
-{% set version = "1.11.2.1" %}
+{% set version = "1.12.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 91633f5fef31e36e6625eaefe147323df3d582fdf6d45cdd7bb761e2b360756a
+  sha256: 6d1f9becdaa9894af52ecbac46e72f4e1d1564dd99f27d60f574ce1c490c8aca
 
 build:
   number: 0
@@ -25,18 +25,19 @@ requirements:
     - setuptools
     - pip
   run:
+    - uritools >=4.0.3
     - python
-    - netcdf4 >=1.5.4
-    - cftime >=1.6.0
-    - numpy >=1.15,<2.0
+    - netcdf4 >=1.7.2
+    - cftime >=1.6.4
+    - numpy >=2.0.0
     - packaging >=20.0
     - scipy >=1.10.0
     - h5netcdf >=1.3.0
-    - h5py >=3.10.0
+    - h5py >=3.12.0
     - s3fs >=2024.6.0
-    - dask-core >=2024.6.0,<=2024.7.1
+    - dask-core >=2025.2.0
     # mandatory dependency not in the metadata
-    - cfunits
+    - cfunits >=3.3.7
 
 test:
   imports:
