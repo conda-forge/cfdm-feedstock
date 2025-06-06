@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   # has scripts and cannot be noarch
-  skip: true  # [py<310]
+  skip: true  # [py<311]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
