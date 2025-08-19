@@ -1,5 +1,5 @@
 {% set name = "cfdm" %}
-{% set version = "1.12.2.0" %}
+{% set version = "1.12.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 89a169a7e6bed1b098ba96b2f2f0e81c1eedc3642000e6e16a4c30c6d8de6428
+  sha256: a011f6f4d481c5a7d9128803e6405e94b55e840b8b33407a302e3528be27d68a
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - pip
   run:
+    - distributed >=2025.5.1
     - zarr >=3.0.8
     - python
     - cftime >=1.6.4
