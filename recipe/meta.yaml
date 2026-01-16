@@ -1,5 +1,5 @@
 {% set name = "cfdm" %}
-{% set version = "1.12.3.1" %}
+{% set version = "1.13.0.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 932b6b47c950e56125769f76326cffb4430c0f060783e0fcc8fd869142d5af4a
+  sha256: ee33be390e12340f35292ec1c860a74ea19de8bc974eab91046c0c06275ed78d
 
 build:
-  number: 1
+  number: 0
   # has scripts and cannot be noarch
   skip: true  # [py<311]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
