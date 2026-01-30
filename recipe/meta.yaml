@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - distributed >=2025.5.1
-    - zarr >=3.0.8
+    - zarr >=3
     - python
     - cftime >=1.6.4
     - cfunits >=3.3.7
