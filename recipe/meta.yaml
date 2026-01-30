@@ -11,9 +11,9 @@ source:
   sha256: ee33be390e12340f35292ec1c860a74ea19de8bc974eab91046c0c06275ed78d
 
 build:
-  number: 0
+  number: 1
   # has scripts and cannot be noarch
-  skip: true  # [py<311]
+  skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
