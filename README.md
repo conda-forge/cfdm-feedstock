@@ -240,4 +240,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@valeriupredoi](https://github.com/valeriupredoi/)
 
