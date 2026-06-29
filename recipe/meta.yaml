@@ -1,5 +1,5 @@
 {% set name = "cfdm" %}
-{% set version = "1.13.1.0" %}
+{% set version = "1.13.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f09baa3911d2b13db13013515830b3f0ab45be7f514b2509ba7f16d1d86df51b
+  sha256: f46e9a33c6930cba7981bbbf7efe38ffb81b29465827f3b76dce3e4d5eab593a
 
 build:
   number: 0
