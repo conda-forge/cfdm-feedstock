@@ -1,0 +1,57 @@
+schema_version: 1
+
+context:
+  version: "1.13.3.0"
+
+package:
+  name: cfdm
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/c/cfdm/cfdm-${{ version }}.tar.gz
+  sha256: 55ba3cb8157d0043fe93ca016cbe55b0038f271d5be3c4a8607c6bb114df9e16
+
+build:
+  number: 0
+  # has scripts and cannot be noarch
+  skip: match(python, "<3.11")
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - pip
+  run:
+    - python
+    - netcdf4 >=1.7.2
+    - cftime >=1.6.4
+    - numpy >=2.0.0
+    - packaging >=20.0
+    - h5py >=3.12.0
+    - h5netcdf >=1.8.1
+    - fsspec >=2026.2.0
+    - dask-core >=2025.5.1
+    - distributed >=2025.5.1
+    - uritools >=4.0.3
+    - cfunits >=3.3.7
+    - scipy >=1.10.0
+    - xnetcdf >=0.1.0
+
+tests:
+  - python:
+      imports:
+        - cfdm
+      pip_check: true
+
+about:
+  summary: A Python reference implementation of the CF data model
+  license: MIT
+  license_file: LICENSE
+  homepage: https://ncas-cms.github.io/cfdm
+
+extra:
+  recipe-maintainers:
+    - davidhassell
+    - valeriupredoi
+    - ocefpaf
