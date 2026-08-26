@@ -1,5 +1,5 @@
 {% set name = "cfdm" %}
-{% set version = "1.13.2.1" %}
+{% set version = "1.13.3.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e937bfde036e235af60c8dd8c4143185730b67855d21ceca040b7e2df0188eac
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 55ba3cb8157d0043fe93ca016cbe55b0038f271d5be3c4a8607c6bb114df9e16
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - pip
   run:
+    - xnetcdf >=0.1.0
     - fsspec >=2026.2.0
     - pyfive >=1.1.1
     - distributed >=2025.5.1
@@ -30,7 +31,7 @@ requirements:
     - cftime >=1.6.4
     - cfunits >=3.3.7
     - dask-core >=2025.5.1
-    - h5netcdf >=1.8.0
+    - h5netcdf >=1.8.1
     - h5py >=3.12.0
     - netcdf4 >=1.7.2
     - numpy >=2.0.0
