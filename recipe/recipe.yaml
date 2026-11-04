@@ -42,7 +42,7 @@ tests:
   - python:
       imports:
         - cfdm
-      pip_check: false  # set to true next build or release
+      pip_check: true
 
 about:
   summary: A Python reference implementation of the CF data model
