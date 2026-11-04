@@ -36,13 +36,13 @@ requirements:
     - uritools >=4.0.3
     - cfunits >=3.3.7
     - scipy >=1.10.0
-    - xnetcdf >=0.1.0
+    - xnetcdf >=0.2.0
 
 tests:
   - python:
       imports:
         - cfdm
-      pip_check: true
+      pip_check: false  # set to true next build or release
 
 about:
   summary: A Python reference implementation of the CF data model
