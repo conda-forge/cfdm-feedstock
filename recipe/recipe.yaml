@@ -12,7 +12,7 @@ source:
   sha256: 55ba3cb8157d0043fe93ca016cbe55b0038f271d5be3c4a8607c6bb114df9e16
 
 build:
-  number: 0
+  number: 1
   # has scripts and cannot be noarch
   skip: match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -36,7 +36,7 @@ requirements:
     - uritools >=4.0.3
     - cfunits >=3.3.7
     - scipy >=1.10.0
-    - xnetcdf >=0.1.0
+    - xnetcdf >=0.2.0
 
 tests:
   - python:
