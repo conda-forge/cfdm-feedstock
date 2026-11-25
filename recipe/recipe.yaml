@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.13.3.0"
+  version: "1.13.4.0"
 
 package:
   name: cfdm
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/cfdm/cfdm-${{ version }}.tar.gz
-  sha256: 55ba3cb8157d0043fe93ca016cbe55b0038f271d5be3c4a8607c6bb114df9e16
+  sha256: 023261597637c03564044c2f562043d5e2ad7a021ed62a1609ed4221a6326469
 
 build:
-  number: 1
+  number: 0
   # has scripts and cannot be noarch
   skip: match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
